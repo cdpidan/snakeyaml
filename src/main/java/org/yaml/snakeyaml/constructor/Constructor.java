@@ -41,6 +41,11 @@ import org.yaml.snakeyaml.util.EnumUtils;
  */
 public class Constructor extends SafeConstructor {
 
+  public Constructor() {
+    this(Object.class, new LoaderOptions());
+    this.loadingConfig.setAllowRecursiveKeys(false);
+  }
+
   /**
    * Create with options
    *

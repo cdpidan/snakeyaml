@@ -132,6 +132,10 @@ public class ParserImpl implements Parser {
   private Production state;
   private VersionTagsTuple directives;
 
+  public ParserImpl(StreamReader reader) {
+    this(reader, new LoaderOptions());
+  }
+
   public ParserImpl(StreamReader reader, LoaderOptions options) {
     this(new ScannerImpl(reader, options));
   }

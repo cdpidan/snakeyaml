@@ -46,6 +46,13 @@ public class SafeConstructor extends BaseConstructor {
 
   /**
    * Create an instance
+   */
+  public SafeConstructor() {
+    super(new LoaderOptions());
+  }
+
+  /**
+   * Create an instance
    *
    * @param loaderOptions - the configuration options
    */
